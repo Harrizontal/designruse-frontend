@@ -20,37 +20,29 @@ export default function Home ({ allPostsData }) {
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section> */}
-      <Subscribe/>
+      {/* <Subscribe/> */}
       <div className={`${utilStyles.contentWrapper}`}>
         <div className={`${utilStyles.leftColumn}`}>
-          <h1 className={`${utilStyles.heading2Xl}`}>Probably your best way to get news on design with tech.</h1>
+          <h1 className={`${utilStyles.heading2Xl}`}>Perusing the design within startup and everyday life in Singapore.</h1>
         </div>
         <div className={`${utilStyles.rightColumn}`}>
           <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <ul className={utilStyles.list}>
               {allPostsData.map(({ id, date, title,thumbnail_image,short_description }) => (
                 <li className={utilStyles.listItem} key={id}>
-                <Link href="/articles/[id]" as={`/articles/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                {/* <span>{short_description}</span> */}
-                <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} /> • <span>{short_description}</span>
-                </small>
-                
-                {/* <img
-                  src={thumbnail_image}
-                  alt="name"
-                /> */}
-                
-              </li>
+                  <Link href="/articles/[id]" as={`/articles/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                  <br />
+                  <small className={utilStyles.lightText}>
+                   <span>{short_description}</span> • <Date dateString={date}/> 
+                  </small>
+                </li>
               ))}
             </ul>
           </section>
         </div>
       </div>
-      
     </Layout>
   )
 }

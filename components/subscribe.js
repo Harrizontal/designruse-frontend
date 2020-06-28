@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import styles from './subscribe.module.css';
+
 
 export default function Subscribe() {
   // 1. Create a reference to the input so we can fetch/clear it's value.
@@ -35,21 +37,26 @@ export default function Subscribe() {
   };
 
   return (
-    <form onSubmit={subscribe}>
-      <label htmlFor="email-input">{'Email Address'}</label>
-      <input
-        id="email-input"
-        name="email"
-        placeholder="you@awesome.com"
-        ref={inputEl}
-        type="email"
-      />
-      <div>
-        {message
-          ? message
-          : `I'll only send emails when new content is posted. No spam.`}
+    <div>
+      <div className={styles.subscribeCtaWrapper}>
+        {/* <form onSubmit={subscribe}> */}
+          <input
+            id="email-input"
+            name="email"
+            placeholder="Email"
+            ref={inputEl}
+            type="email"
+            className={styles.email}
+          />
+        {/* </form> */}
+        <button type="submit" className={styles.subscribeButton} onClick={subscribe}>{'Subscribe'}</button>
       </div>
-      <button type="submit">{'✨ Subscribe 💌'}</button>
-    </form>
+      <div>
+          {message
+            ? message
+            : ``}
+      </div>
+    </div>
+    
   );
 }

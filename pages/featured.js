@@ -2,13 +2,13 @@ import React from "react";
 import Layout from '../components/layout'
 import Head from 'next/head'
 
-export default function About(){
+export default function Featured(){
     return (
         <Layout>
             <Head>
-                <title>About | Designruse</title>
+                <title>Featured | Designruse</title>
             </Head>
-            About me
+            Featured
         </Layout>
     )
 }

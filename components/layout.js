@@ -3,6 +3,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import React from 'react'
+import Subscribe from './subscribe'
 
 const name = 'Designruse'
 export const siteTitle = 'Designruse'
@@ -26,23 +27,27 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <nav className={styles.header}>
-        <h2 className={utilStyles.headingLg}>
-          <Link href="/">
-            <a className={utilStyles.colorInherit}>{name}</a>
-          </Link>
-        </h2>
-        <h2 className={utilStyles.headingLg}>
-          <Link href="/about">
-            <a className={utilStyles.colorInherit}>About</a>
-          </Link>
-        </h2>
-        <h2 className={utilStyles.headingLg}>
-          <Link href="/sponser">
-            <a className={utilStyles.colorInherit}>Sponser</a>
-          </Link>
-        </h2>
-      </nav>
+      <div className={styles.header}>
+        <nav className={styles.headerNav}>
+          <h2 className={utilStyles.headingXl} style={{margin:0}}>
+            <Link href="/">
+              <a className={utilStyles.colorInherit}>{name}</a>
+            </Link>
+          </h2>
+          <h2 className={utilStyles.headingXSm} style={{margin:0}}>
+            <Link href="/about">
+              <a className={utilStyles.colorInherit}>About</a>
+            </Link>
+          </h2>
+          <h2 className={utilStyles.headingXSm} style={{margin:0}}>
+            <Link href="/featured">
+              <a className={utilStyles.colorInherit}>Sponser</a>
+            </Link>
+          </h2>
+        </nav>
+        <Subscribe/>
+      </div>
+
       {/* <header className={styles.header}>
         {home ? (
           <>
@@ -75,9 +80,11 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
+          <h2 className={utilStyles.headingMd}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
+          </h2>
         </div>
       )}
     </div>

@@ -26,6 +26,18 @@
   line-height: 1.5;
 }
 
+.headingSm {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.headingXSm{
+  font-size:0.9rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
@@ -48,6 +60,20 @@
   margin: 0 0 2rem;
 }
 
+
+.neumorphism{
+  transition: all 0.5s ease;
+  border-radius: 18px;
+  background: white;
+  margin: 0 0 2rem;
+  padding: 1rem;
+  box-shadow: 28px 28px 55px #dbdbdb,-25px -25px 51px #ffffff;
+}
+
+.neumorphism:hover{
+  background: green;
+}
+
 .lightText {
   color: #999;
   font-size: 0.7em;
@@ -62,10 +88,14 @@
 
 .leftColumn{
   max-width: 500px;
+  width:40%;
 }
 
 .rightColumn{
-  max-width: 800px;
+  margin-left: 2em;
+  min-width: 400px;
+  width: 60%;
+  max-width: 700px;
 }
 
 
@@ -77,6 +107,11 @@
   .leftColumn{
     max-width: 550px;
     margin-bottom: 1.5rem;
+  }
+  
+  .rightColumn{
+    margin: 0;
+    max-width: 800px;
   }
 
 }
