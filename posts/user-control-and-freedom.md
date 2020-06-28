@@ -1,5 +1,5 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
+title: 'User control and freedom'
 date: '2020-01-02'
 thumbnail_image: '/images/1-visibility-of-system-status/hero.png'
 short_description: 'testing'

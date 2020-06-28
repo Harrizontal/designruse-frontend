@@ -1,6 +1,6 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
-date: '2020-01-02'
+title: 'Everything about motion'
+date: '2020-01-03'
 thumbnail_image: '/images/1-visibility-of-system-status/hero.png'
 short_description: 'testing'
 ---

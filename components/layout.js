@@ -4,17 +4,18 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import React from 'react'
 
-const name = 'Your Name'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Designruse'
+export const siteTitle = 'Designruse'
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+      {/* <div> */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="All your information on design"
         />
         <meta
           property="og:image"
@@ -25,7 +26,24 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <nav className={styles.header}>
+        <h2 className={utilStyles.headingLg}>
+          <Link href="/">
+            <a className={utilStyles.colorInherit}>{name}</a>
+          </Link>
+        </h2>
+        <h2 className={utilStyles.headingLg}>
+          <Link href="/about">
+            <a className={utilStyles.colorInherit}>About</a>
+          </Link>
+        </h2>
+        <h2 className={utilStyles.headingLg}>
+          <Link href="/sponser">
+            <a className={utilStyles.colorInherit}>Sponser</a>
+          </Link>
+        </h2>
+      </nav>
+      {/* <header className={styles.header}>
         {home ? (
           <>
             <img
@@ -53,7 +71,7 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
-      </header>
+      </header> */}
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
